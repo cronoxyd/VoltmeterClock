@@ -1,0 +1,4 @@
+{
+    "sketch": "VoltmeterClock.ino",
+    "board": "arduino:avr:uno"
+}
