@@ -3,6 +3,7 @@
 
 /* Memory configuration */
 #define RAMDATA_SIZE 4
+#define EEPROMDATA_SIZE 1
 
 /* RAM data ids */
 
@@ -13,5 +14,7 @@
 #define DATAID_DCFINSYNC 3
 
 /* EEPROM data ids */
+
+#define DATAID_CLOCKMODE 4
 
 #endif /* RESOURCES_H */

@@ -1,8 +1,10 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define VERSION "1.0.10"
+
 /* Debug configuration */
-#define DEBUG 0
+#define DEBUG 1
 
 /* Pin configuration */
 
@@ -16,7 +18,7 @@
 #define PIN_SECONDMETER 11
 
 /* Serial configuration */
-#define SERIAL_BAUD 9600
+#define SERIAL_BAUD 115200
 
 /* DCF77Driver configuration */
 #define DCF_INT 0
