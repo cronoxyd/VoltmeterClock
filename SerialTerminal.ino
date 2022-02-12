@@ -123,6 +123,8 @@ void SerialTerminal_Task() {
     DataHandler_Save();
     Serial.println("OK");
   } else if (command == "reset") {
+    DataHandler_SetData(DATAID_CLOCKMODE, 0);
+    DataHandler_Save();
     Serial.println("OK");
     resetFunc();
   } else if (command == "help") {
@@ -151,6 +153,9 @@ void SerialTerminal_Task() {
     } else if (command == "ver") {
       Serial.println(F("VER\n"));
       Serial.println(F("Displays the VoltmeterClock version"));
+    } else if (command == "reset") {
+      Serial.println(F("RESET\n"));
+      Serial.println(F("Resets the device (including the configuration parameters)"));
     } else {
       Serial.println(F("For more information on a specific command, type HELP command-name"));
       Serial.println(F("GET\tRetrieves information about the device"));
