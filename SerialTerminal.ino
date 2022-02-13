@@ -9,14 +9,10 @@ void(* resetFunc) (void) = 0;
 void SerialTerminal_Init() {
 #if DEBUG
   Serial.begin(SERIAL_BAUD);
-  Serial.print("VoltmeterClock CLI [Version ");
-  Serial.print(VERSION);
-  Serial.println("]");
-  Serial.println("");
 #endif /* DEBUG */
 }
 
-String SerialTerminal_GetNextCommandPart() {
+String SerialTerminal_GetNextCommandPart() {   
   String retVal = "";
 
   do {
@@ -34,6 +30,9 @@ String SerialTerminal_GetNextCommandPart() {
 }
 
 void SerialTerminal_Task() {
+  if (!Serial)
+    return;
+    
   if (!Serial.available())
     return;
 
